@@ -114,8 +114,6 @@ jobs:
         variant:
           - arch: x86_64
             runner: ubuntu-24.04
-          - arch: aarch64
-            runner: ubuntu-24.04-arm
     # Don't run scheduled builds on forks:
     if: ${{ !cancelled() && (github.event_name != 'schedule' || github.repository == 'OrcaSlicer/OrcaSlicer') }}
     runs-on: ${{ matrix.variant.runner }}
